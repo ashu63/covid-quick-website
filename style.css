@@ -1,0 +1,153 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    line-height: 1.4;
+}
+.home{
+    display: flex;
+    justify-content: space-around;
+}
+.home__left{
+    display: flex;
+    align-items: center;
+    margin-left: -40px;
+}
+.home__left > img{
+    height: 50px;
+    margin-right: 10px;
+}
+.home__left > h2 > span{
+    color: rgb(28, 189, 109);
+}
+.home__right > h2 > span{
+    color: rgb(28, 189, 109);
+
+}
+.home__body{
+    padding-left: 230px;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+.home__bodyLeft > h1{
+    max-width: 700px;
+    color: rgb(0, 156, 78);
+
+}
+.home__bodyLeft > p{
+    max-width: 700px;
+    color: grey;
+}
+.home__bodyRight > img{
+    height: 200px;
+}
+.body__last{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    background-color: rgb(230, 241, 236);
+    box-shadow: -2px -4px 20px 0px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+.body__lastLeft{
+    max-width: 500px;
+    margin-left: 110px;
+}
+.body__lastLeft > h1{
+    color: rgb(0, 156, 78);
+}
+.body__lastLeft > p{
+    color: grey;
+}
+.body__lastRight{
+    max-width: 500px;
+}
+.body__lastRight > h1{
+    color: rgb(0, 156, 78);
+}
+.body__lastRight > p{
+    color: grey;
+}
+.body__two{
+    margin-top: 100px;
+    margin-left: 210px;
+}
+.body__twoLeft > p{
+    font-size: small;
+    color: grey;
+    margin-top: 30px;
+}
+.body__twoLeft > h2{
+    margin-top: -10px;
+    max-width: 500px;
+    font-size: 30px;
+    color: rgb(161, 12, 12);
+}
+.body__twoLeft > h2:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#para{
+    max-width: 500px;
+    font-size: 23px;
+}
+.body__twoRight > img{
+    padding-top: 30px;
+    height: 500px;
+}
+.good__info{
+    margin: 50px 200px;
+    line-height: 1.7;
+    font-size: 20px;
+}
+#con{
+    color: rgb(187, 27, 27);
+    position: absolute;
+    left: 110px;
+}
+#heading{
+    display: grid;
+    place-items: center;
+    margin-top: 60px;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+#fl{
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    padding-bottom: 5px;
+}
+#fl:hover{
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+#fl:hover #con{
+    color: black;
+}
+#fl:hover #cases{
+    color: black;
+}
+#fl:hover #recovered{
+    color: black;
+}
+#fl:hover #deaths{
+    color: black;
+}
+#cases{
+    color: rgb(27, 37, 129);
+    position: absolute;
+    left: 500px;
+}
+#deaths{
+    color: rgb(161, 4, 161);
+    margin-left: 280px;
+}
+#recovered{
+    position: absolute;
+    right: 150px;
+    color: rgb(1, 153, 1);
+}

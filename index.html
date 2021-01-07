@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="home">
+        <div class="home__left">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.H3fpV2QNeFECIZVhuaV7RgHaGI&pid=Api&P=0&w=203&h=169" alt="">
+            <h2>COVID <span>DATA</span></h2>
+        </div>
+        <div class="home__right">
+            <h2>ALL <span>OVER</span>  THE WORLD</h2>
+        </div>
+    </div>
+    <div class="home__body">
+        <div class="home__bodyLeft">
+            <h1>The COVID Tracking Project collects and publishes the most complete data about COVID-19 in the US.</h1>
+            <p>Every day, our volunteer teams compile the latest public health data from official US state, territorial, and federal sources.</p>
+        </div>
+        <div class="home__bodyRight">
+            <img src="https://images.ctfassets.net/o2ll9t4ee8tq/5USkc1XX57FQK5f5rFQDkt/8d93d4e16574dc316aa50db9c89ec29a/image2.png?w=1200&h=596&q=50" alt="">
+        </div>
+   
+    </div>
+    <div class="body__last">
+        <div class="body__lastLeft">
+            <h1>Race & ethnicity data</h1>
+            <p>The COVID Racial Data Tracker is a collaboration between the COVID Tracking Project and the Boston University Center for Antiracist Research. Together, we’re gathering the most complete and up-to-date race and ethnicity data on COVID-19 in the United States.</p>
+        </div>
+        <div class="body__lastRight">
+            <h1>Long-term-care data</h1>
+            <p>To date, the Long-Term Care COVID Tracker is the most comprehensive dataset about COVID-19 in US nursing homes and other long-term care facilities. It compiles crucial data about the effects of the pandemic on a population with extraordinary.</p>
+        </div>
+    </div>
+    <div class="body__two">
+        <div class="body__twoLeft">
+            <h1>Our analysis & updates</h1>
+            <p>Dec 31, 2020</p>
+            <h2>All Eyes on Hospitalizations: This Week in COVID-19 Data, Dec 30</h2>
+            <p id="para">Holiday reporting has garbled most metrics. Going by current COVID-19 hospitalizations, outbreaks in the Midwest are still easing, but every other region is in trouble.</p>
+        </div>
+        <div class="body__twoRight">
+            <img src="https://images.ctfassets.net/o2ll9t4ee8tq/5Pe7V7YCsicRxvTF8FlMc/4ea296e5897d911c339d7c70f1816131/Auto-uploaded_image__2__at_2020-12-24_05_44_37?w=1200&h=595&q=50" alt="">
+        </div>
+
+    </div>
+    <div class="good__info">
+        <p>** Active cases are locally acquired COVID-19 cases with onset in the last four weeks. This is based on the date the person first developed symptoms. When no date of symptom onset is available (it is either under investigation by public health staff or the person tested positive without showing symptoms), the date of the positive test is used. Infections are not always acquired in the place of residence as people often travel outside their area for many reasons (e.g. work, school and shopping).
+            ***The heatmap excludes 189 cases in crew members who tested positive while on board a ship docked in NSW at the time of diagnosis.</p>
+    </div>
+
+    <div id="output"></div>
+
+</body>
+<script>
+    window.onload = function getData() {
+         fetch('https://covid19-api.org/api/status')
+        .then((res) => res.json())
+        .then((data) => {
+            let output = "<h1 id='heading'>Corona Virus Update</h1>"
+            console.log(data);
+            data.forEach(function(info){
+                 output += `
+                 <div id="fl">
+                    <h2 id="con">Country : ${info.country}</h2>
+                    <h2 id="cases">Cases : ${info.cases}</h2>
+                    <h2 id="deaths">Deaths : ${info.deaths}</h2>
+                    <h2 id="recovered">Recovered : ${info.recovered}</h2>
+                </div>
+                 `
+            })
+            document.getElementById('output').innerHTML = output;
+        })
+    }
+</script>
+</html>
